@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRODY CEES</title>
+    <style>
+        body {
+            font-family: Poppins, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #00796b;
+            padding: 20px;
+            color: white;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			text-align: center;
+        }
+        footer {
+            background-color: #004d40;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+		/* CSS untuk membuat isi Home tersembunyi */
+        #homeContent {
+            display: none;
+            transition: all 0.5s ease;
+        }
+        /* Gaya untuk tombol atau link */
+        .toggle-button {
+            cursor: pointer;
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        /* Gaya untuk bagian Home */
+        #home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+        #homeContent {
+            text-align: justify; /* Membuat teks rata kanan-kiri */
+            max-width: 800px;
+            line-height: 1.6;
+            font-size: 18px;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .toggle-button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo BRODY CEES">
+        <h1>HALLO BRODY BRODY GUE</h1>
+        <nav> Selamat Datang di Brody Cees
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">CREW</a></li>
+                <li><a href="#projects">PORTOFOLIO</a></li>
+                <li><a href="#contact">HUBUNGI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>APA ITU BRODY CEES</h2>
+        <button class="toggle-button" onclick="toggleContent('homeContent')">Klik untuk lihat lebih lanjut</button>
+        <div id="homeContent">
+            <p>Brody Cees adalah sebuah production house yang berperan penting dalam pembuatan seluruh video untuk proyek tertentu. Kami bertanggung jawab atas seluruh aspek produksi, mulai dari konsep kreatif, pengambilan gambar, hingga proses editing. Dengan tim profesional dan peralatan berkualitas tinggi, Brody Cees memastikan setiap video yang mereka hasilkan memiliki standar visual dan audio yang tinggi, sesuai dengan kebutuhan klien.</p>
+        </div>
+    </section>
+	
+    <section id="about">
+        <h2>CREW</h2>
+		<button class="toggle-button" onclick="toggleContent('kru-item')">Klik untuk lihat lebih lanjut</button>
+        <ul class="kru-list">
+            <li class="kru-item">
+                <span onclick="toggleDetails('sandhyDetails')">1. Sandhy (Editing dan Desain Grafis)</span>
+                <div id="sandhyDetails" class="kru-details">
+                    <p>Instagram: <a href="https://instagram.com/sanscaw__" target="_blank">@sanscaw__</a></p>
+                    <p>TikTok: <a href="https://tiktok.com/@sanscaw__" target="_blank">SANSCAW__</a></p>
+                </div>
+            </li>
+            <li class="kru-item">
+                <span onclick="toggleDetails('anandaDetails')">2. Ananda Rizqi Mubarok (Videografer dan Editing)</span>
+                <div id="anandaDetails" class="kru-details">
+                    <p>Instagram: <a href="https://www.instagram.com/rzqi1807?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">@ananda</a></p>
+                    <p>TikTok: <a href="https://tiktok.com/@ananda" target="_blank">Ananda</a></p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+    <section id="projects">
+        <h2>PROJEK TERBARU</h2>
+		<button class="toggle-button" onclick="toggleContent()">Klik untuk lihat lebih lanjut</button>
+    </section>
+
+    <section id="contact">
+        <h2>HUBUNGI KAMI</h2>
+        <p>Email: brodycees@gmail.com</p>
+        <p>Telepon: +62 8958 0001 0205</p>
+		<p>Telepon: +62 8958 0001 0205</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 BRODY CEES. All rights reserved.</p>
+    </footer>
+	
+	<script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+		function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
